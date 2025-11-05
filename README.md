@@ -1,21 +1,16 @@
-# Car Dealership 
+# Advanced Car Dealership 
 
 ## Project Overview
 
-Car Dealership is a Java-based command-line application that simulates the operations of a car dealership system. 
-It allows users to browse and search a dealership’s vehicle inventory by various criteria such as price range, make/model, year, color, mileage, and type. 
-Users can view all available vehicles, add new listings, or remove existing ones, with all updates automatically saved to a dealership data file.
+Advanced Car Dealership is a continuation of the Car Dealership Java-based command-line application that manages a dealership’s vehicle inventory. 
+Building on the original features, users can now record vehicle sales or leases, capture customer information, automatically calculate pricing and monthly payments, and save all contract details to a file.
+
 ## User Stories
 
-- As a user, I want to view all vehicles in the dealership's inventory, so that I can quickly scan available stock.
-- As a salesperson, I want to search for vehicles between a minimum and maximum price, so that I can show customers cars that fit their budget.
-- As a salesperson, I want to search by vehicle make and/or model, so that I can quickly locate specific brands.
-- As a salesperson, I want to filter vehicles between two years, so that I can show customers newer or older models.
-- As a salesperson, I want to find all vehicles of a given color, so that I can meet customer style preferences.
-- As a salesperson, I want to filter cars by mileage range, so that I can show vehicles with acceptable wear.
-- As a salesperson, I want to find vehicles by their type, so that I can focus on what category the customer prefers.
-- As a manager, I want to add a new vehicle to the inventory, so that I can expand available listings.
-- As a manager, I want to remove a vehicle from inventory, so that I can keep the dealership's inventory accurate.
+- As a salesperson, I want to record vehicle sales, so that pricing, tax, and finance details are automatically calculated.
+- As a salesperson, I want to record vehicle leases, so that leasing details are correctly computed.
+- As a salesperson, I want all contracts saved to a file, so that dealership transactions are permanently stored.
+- As a salesperson, I want to sell or lease a vehicle directly from the menu, so that customer contracts are created and stored automatically.
 
 ## Setup
 
@@ -42,7 +37,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Demo
 
-![Application Demo](./workshop3-demo.gif)
+![Application Demo](./workshop4-demo.gif)
 
 ## Future Work
 
@@ -53,8 +48,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ## Resources
 
 - [Potato Sensei - OpenAI: ChatGpt 5 LLM](https://chatgpt.com/g/g-681d378b0c90819197b16e49abe384ec-potato-sensei)
-- [Capstone 1: Financial Tracker Repository](https://github.com/nati-tewolde/financial-tracker)
-- [Workshop 2: Online Store](https://github.com/nati-tewolde/online-store)
+- [Workshop 3: Car Dealership](https://github.com/nati-tewolde/car-dealership)
 
 ## Team Members
 

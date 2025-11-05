@@ -24,9 +24,9 @@ public class ContractFileManager {
                         + contract.getCustomerEmail() + "|" + contract.getVehicleSold().getVin() + "|" + contract.getVehicleSold().getYear() + "|"
                         + contract.getVehicleSold().getMake() + "|" + contract.getVehicleSold().getModel() + "|" + contract.getVehicleSold().getVehicleType() + "|"
                         + contract.getVehicleSold().getColor() + "|" + contract.getVehicleSold().getOdometer() + "|"
-                        + String.format("%.1f", contract.getVehicleSold().getPrice()) + "|" + ((SalesContract) contract).getSalesTaxAmount() + "|"
-                        + ((SalesContract) contract).getRecordingFee() + "|" + ((SalesContract) contract).getProcessingFee() + "|" + contract.getTotalPrice() + "|"
-                        + financeOption + "|" + contract.getMonthlyPayment() + "\n");
+                        + String.format("%.2f", contract.getVehicleSold().getPrice()) + "|" + String.format("%.2f", ((SalesContract) contract).getSalesTaxAmount()) + "|"
+                        + String.format("%.2f", ((SalesContract) contract).getRecordingFee()) + "|" + String.format("%.2f", ((SalesContract) contract).getProcessingFee()) + "|"
+                        + String.format("%.2f", contract.getTotalPrice()) + "|" + financeOption + "|" + String.format("%.2f", contract.getMonthlyPayment()) + "\n");
 
             } else {
                 contractType = "LEASE";
@@ -35,8 +35,9 @@ public class ContractFileManager {
                         + contract.getCustomerEmail() + "|" + contract.getVehicleSold().getVin() + "|" + contract.getVehicleSold().getYear() + "|"
                         + contract.getVehicleSold().getMake() + "|" + contract.getVehicleSold().getModel() + "|" + contract.getVehicleSold().getVehicleType() + "|"
                         + contract.getVehicleSold().getColor() + "|" + contract.getVehicleSold().getOdometer() + "|"
-                        + String.format("%.1f", contract.getVehicleSold().getPrice()) + "|" + ((LeaseContract) contract).getExpectedEndingValue() + "|"
-                        + ((LeaseContract) contract).getLeaseFee() + "|" + contract.getTotalPrice() + "|" + contract.getMonthlyPayment() + "\n");
+                        + String.format("%.2f", contract.getVehicleSold().getPrice()) + "|" + String.format("%.2f", ((LeaseContract) contract).getExpectedEndingValue()) + "|"
+                        + String.format("%.2f", ((LeaseContract) contract).getLeaseFee()) + "|" + String.format("%.2f", contract.getTotalPrice()) + "|"
+                        + String.format("%.2f", contract.getMonthlyPayment()) + "\n");
             }
             writer.close();
         } catch (IOException ex) {

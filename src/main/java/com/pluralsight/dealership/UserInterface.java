@@ -1,6 +1,8 @@
 package com.pluralsight.dealership;
 
+import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
@@ -451,7 +453,10 @@ public class UserInterface {
         }
 
         Contract contract;
-        String contractDate = LocalDate.now().toString();
+        LocalDate contractDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        String formattedContractDate = contractDate.format(formatter);
+
         if (contractType.equalsIgnoreCase("s")) {
             String financeOption;
             while (true) {
@@ -465,11 +470,11 @@ public class UserInterface {
                 break;
             }
 
-            SalesContract salesContract = new SalesContract(contractDate, customerName, customerEmail, matchingVehicle);
+            SalesContract salesContract = new SalesContract(formattedContractDate, customerName, customerEmail, matchingVehicle);
             salesContract.setFinanced(financeOption.equalsIgnoreCase("y"));
             contract = salesContract;
         } else {
-            contract = new LeaseContract(contractDate, customerName, customerEmail, matchingVehicle);
+            contract = new LeaseContract(formattedContractDate, customerName, customerEmail, matchingVehicle);
         }
 
         ContractFileManager contractFileManager = new ContractFileManager();
